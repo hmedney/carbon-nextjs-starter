@@ -1,0 +1,37 @@
+{
+  "name": "geds-query",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --ignore-path .gitignore --write .",
+    "lint": "next lint"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@carbon/icons-react": "^10.22.0",
+    "axios": "^0.21.0",
+    "carbon-components": "^10.25.0",
+    "carbon-components-react": "^7.25.0",
+    "carbon-icons": "^7.0.7",
+    "debug": "^4.1.1",
+    "fs-extra": "^10.0.0",
+    "next": "^11.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-next": "^11.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^2.0.5"
+  }
+}
