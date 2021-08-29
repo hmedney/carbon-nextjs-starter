@@ -25,7 +25,7 @@ function App({Component, pageProps}) {
   return (
     <Layout>
       <Head>
-        <title>GEDS Query</title>
+        <title>Carbon NextJS Starter</title>
       </Head>
       <Component {...pageProps} />
     </Layout>
