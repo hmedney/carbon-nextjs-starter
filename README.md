@@ -1,6 +1,6 @@
 # Carbon NextJS starter app
 
-Bare-bones app with NextJS and IBM's [Carbon Design System]().
+Bare-bones app with [NextJS](https://nextjs.org/) and IBM's [Carbon Design System]().
 
 ### Quick start
 
