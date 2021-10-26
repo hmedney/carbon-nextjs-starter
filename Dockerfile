@@ -3,6 +3,8 @@
 #######################################################################################
 FROM node:16-alpine as base
 RUN apk update && apk upgrade
+# RUN apk add libc6-compat
+# RUN ln -s ../lib64/ld-linux-x86-64.so.2 /lib/
 WORKDIR /usr/app
 
 #######################################################################################
@@ -11,7 +13,6 @@ WORKDIR /usr/app
 FROM base as builder
 
 COPY src/ src/
-COPY next.config.js .
 COPY package.json .
 COPY .eslintrc.json .
 COPY .prettierrc .
@@ -26,7 +27,6 @@ RUN yarn build
 FROM base as run
 
 COPY --from=builder /usr/app/.next .next/
-COPY next.config.js .
 COPY package.json .
 COPY yarn.lock .
 
