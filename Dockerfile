@@ -1,16 +1,8 @@
 #######################################################################################
-# Pull and prepare base image for subsequent stages
-#######################################################################################
-FROM node:16-alpine as base
-RUN apk update && apk upgrade
-# RUN apk add libc6-compat
-# RUN ln -s ../lib64/ld-linux-x86-64.so.2 /lib/
-WORKDIR /usr/app
-
-#######################################################################################
 # build .next using all dependencies
 #######################################################################################
-FROM base as builder
+FROM node:16-slim as builder
+WORKDIR /usr/app
 
 COPY src/ src/
 COPY package.json .
@@ -24,7 +16,9 @@ RUN yarn build
 #######################################################################################
 # install prod dependencies only and copy built files
 #######################################################################################
-FROM base as run
+FROM node:16-alpine
+RUN apk update && apk upgrade
+WORKDIR /usr/app
 
 COPY --from=builder /usr/app/.next .next/
 COPY package.json .
