@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --ignore-path .gitignore --write .",
     "lint": "next lint"
   },
-  "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.6"
+  },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
   }
 }
