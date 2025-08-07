@@ -1,31 +1,30 @@
 #######################################################################################
 # build .next using all dependencies
 #######################################################################################
-FROM node:16-slim as builder
+FROM node:22.18-slim AS builder
 WORKDIR /usr/app
 
 COPY src/ src/
 COPY package.json .
+COPY package-lock.json .
 COPY .eslintrc.json .
 COPY .prettierrc .
-COPY yarn.lock .
 
-RUN yarn install
-RUN yarn build
+RUN npm ci
+RUN npm build
 
 #######################################################################################
 # install prod dependencies only and copy built files
 #######################################################################################
-FROM node:16-alpine
+FROM node:22.18-alpine
 RUN apk update && apk upgrade
 WORKDIR /usr/app
 
 COPY --from=builder /usr/app/.next .next/
 COPY package.json .
-COPY yarn.lock .
+COPY package-lock.json .
 
-RUN yarn install --production
-RUN yarn cache clean
+RUN npm ci
 
 EXPOSE 3000
-CMD [ "yarn", "start" ]
+CMD [ "npm", "start" ]

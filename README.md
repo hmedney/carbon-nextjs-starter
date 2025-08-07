@@ -4,13 +4,13 @@ Bare-bones app with [NextJS](https://nextjs.org/) and IBM's [Carbon Design Syste
 
 ### Quick start
 
-1. Install dependencies (NodeJS 14+)
+1. Install dependencies (NodeJS 22+)
    ```sh
-   yarn
+   npm ci
    ```
 1. Start dev server
    ```sh
-   yarn dev
+   npm run dev
    ```
 1. Open http://localhost:8000
 
