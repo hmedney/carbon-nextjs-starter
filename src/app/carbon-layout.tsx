@@ -24,15 +24,15 @@ export default function Layout({children}: {children: React.ReactNode}) {
       render={() => (
         <>
           <Theme theme="g100">
-            <Header aria-label="IBM Platform Name">
-              <HeaderName href="#" prefix="IBM">
-                [Platform]
+            <Header aria-label="Site name">
+              <HeaderName href="#" prefix="Carbon">
+                NextJs Starter
               </HeaderName>
-              <HeaderNavigation aria-label="IBM [Platform]">
+              <HeaderNavigation aria-label="Site navigation">
                 <HeaderMenuItem href="#">Link 1</HeaderMenuItem>
                 <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
                 <HeaderMenuItem href="#">Link 3</HeaderMenuItem>
-                <HeaderMenu isActive aria-label="Link 4" menuLinkName="Link 4">
+                <HeaderMenu aria-label="Link 4" menuLinkName="Link 4">
                   <HeaderMenuItem href="#">Sub-link 1</HeaderMenuItem>
                   <HeaderMenuItem href="#">Sub-link 2</HeaderMenuItem>
                   <HeaderMenuItem href="#">Sub-link 3</HeaderMenuItem>
@@ -45,11 +45,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
                 <HeaderGlobalAction aria-label="Notifications" onClick={action('notification click')}>
                   <Notification size={20} />
                 </HeaderGlobalAction>
-                <HeaderGlobalAction
-                  aria-label="App Switcher"
-                  onClick={action('app-switcher click')}
-                  tooltipAlignment="end"
-                >
+                <HeaderGlobalAction aria-label="App Switcher" onClick={action('app-switcher click')} tooltipAlignment="end">
                   <SwitcherIcon size={20} />
                 </HeaderGlobalAction>
               </HeaderGlobalBar>

@@ -3,7 +3,7 @@ import './globals.scss';
 import Layout from './carbon-layout';
 
 export const metadata: Metadata = {
-  title: 'Carbon NextJs starter'
+  title: 'Carbon NextJs Starter'
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
