@@ -11,7 +11,7 @@ import {
   Theme,
   Content
 } from '@carbon/react';
-import {Search, Notification, Switcher as SwitcherIcon, Settings} from '@carbon/icons-react';
+import {Search, Notification, Switcher as SwitcherIcon} from '@carbon/icons-react';
 import React from 'react';
 
 function action(text: string) {
